@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Arroxa_Game</string>
+    <string name="intervalo">0 - 100</string>
+    <string name="botao">Chutar!</string>
+</resources>
