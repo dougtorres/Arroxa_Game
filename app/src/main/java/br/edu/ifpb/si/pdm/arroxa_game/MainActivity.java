@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        this.layout = (LinearLayout)this.findViewById(R.id.layout);
         this.btn = (Button)this.findViewById(R.id.botao);
         this.intervalo = (TextView)this.findViewById(R.id.numIntervalo);
         this.num = (EditText)this.findViewById(R.id.numero);
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case PERDEU:
                         intervalo.setText(" VOCÊ PERDEU! ");
+                        btn.setVisibility(View.INVISIBLE);
+                        num.setVisibility(View.INVISIBLE);
+                        layout.setBackgroundColor(Color.RED);
                         break;
                     case TENTAR_DE_NOVO:
                         intervalo.setText(jogo.getMin() + " - " + jogo.getMax());
